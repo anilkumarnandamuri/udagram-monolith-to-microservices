@@ -11,7 +11,10 @@
 7. Change `PLAN.md` only for scope changes (besides the claim markers board.sh writes).
 
 ## This repo (udagram-monolith-to-microservices)
-- Path: `/workspace/repos/udagram-monolith-to-microservices` | Remote: https://github.com/anilkumarnandamuri/udagram-monolith-to-microservices | Base branch: `master`
-- Run: `n/a`
-- Tests: n/a
-- **Dormant: no commits since 2020-07-15. No active work planned; treat as archived unless Anil revives it.**
+- Path: `/workspace/repos/udagram-monolith-to-microservices` on the shared box. Cloud Agent checkout is the repository root (`/workspace`). Remote: https://github.com/anilkumarnandamuri/udagram-monolith-to-microservices | Base branch: `master`
+- Run: from the repo root, `python3 -m http.server 8080 --bind 0.0.0.0` (Cloud Agent `start` does this and skips it when port 8080 already serves `/README.md`). Open `http://127.0.0.1:8080/README.md` and `http://127.0.0.1:8080/screenshots/`.
+- Tests: n/a. `install` only checks that `README.md` and `screenshots/*.png` are real PNG files.
+- **Dormant product code: this repo is the write-up and screenshots. Feed, user, frontend, and reverse-proxy services are separate repositories. No commits of application source since 2020-07-15.**
+
+## Cloud Agent environment
+Do not look for a package manifest or app server in this checkout. Sibling repos (`udagram-frontend`, `udagram-backend-feed`, `udagram-backend-user`, `reverseproxy`) are not cloned here and are not part of this environment.
